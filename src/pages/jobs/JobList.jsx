@@ -156,6 +156,13 @@ function JobList() {
                       <Eye className="h-4 w-4" />
                     </Link>
                     <Link
+                      to={`/dashboard/jobs/${job.id}/candidates`}
+                      className="text-blue-600 hover:text-blue-900"
+                      title="View Candidates"
+                    >
+                      <Users className="h-4 w-4" />
+                    </Link>
+                    <Link
                       to={`/dashboard/jobs/edit/${job.id}`}
                       className="text-blue-600 hover:text-blue-900"
                     >

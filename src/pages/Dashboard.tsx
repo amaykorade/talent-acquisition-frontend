@@ -12,6 +12,8 @@ import {
 } from 'lucide-react';
 import { collection, query, where, getDocs } from 'firebase/firestore';
 import { db } from '../config/firebase';
+import JobList from './jobs/JobList';
+import JobCandidates from './jobs/JobCandidates';
 
 interface DashboardStats {
   totalJobs: number;
@@ -246,6 +248,8 @@ export default function Dashboard() {
           <Routes>
             <Route index element={<DashboardHome />} />
             <Route path="profile" element={<Profile />} />
+            <Route path="jobs" element={<JobList />} />
+            <Route path="jobs/:jobId/candidates" element={<JobCandidates />} />
           </Routes>
         </div>
       </div>
